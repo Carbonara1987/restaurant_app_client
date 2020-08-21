@@ -9,7 +9,8 @@ class App extends Component {
     state = {
         cart: {
             tableId: '',
-            productsID: []
+            productsID: [],
+            price: []
         }
     };
     /*selectCartTable = (id) => {
@@ -18,12 +19,10 @@ class App extends Component {
         });
         console.log(this.state.cart);
     };*/
-    AddProductToCart = (id) => {
-        //let productsID = [...this.state.cart.productsID]
+    AddProductToCart = (id, price) => {
         this.state.cart.productsID.push(id);
-        /*this.setState({cart: {
-            productsID: productsID
-            }})*/
+        this.state.cart.price.push(parseFloat(price));
+
         console.log(this.state.cart);
     };
   render() {

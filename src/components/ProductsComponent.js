@@ -33,7 +33,7 @@ class ProductsComponent extends Component {
                                 <p>
                                     {product.notes}
                                 </p>
-                                <button value={product.id} onClick={e =>  this.props.AddProductToCart(e.target.value)}>Aggiungi all'ordine</button>
+                                <button value={product.id} onClick={e =>  this.props.AddProductToCart(e.target.value, product.price)}>Aggiungi all'ordine</button>
                             </div>
                         )
                     } else {
